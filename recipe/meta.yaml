@@ -12,21 +12,23 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - pypugjs = pypugjs.convert:convert_file
   script: "{{ PYTHON }} -m pip install pypugjs-{{ version }}-py2.py3-none-any.whl --no-deps -vv"
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - six
     - chardet
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pypugjs
   commands:
