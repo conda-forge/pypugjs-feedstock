@@ -1,5 +1,5 @@
 {% set name = "pypugjs" %}
-{% set version = "5.13.0" %}
+{% set version = "6.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pypugjs-{{ version }}.tar.gz
-  sha256: d5fc9436ed9064f1adff8877149954bb8c364453de6ea57f04d6fc35fdbbd09f
+  sha256: 3840ad13e9171cf69c450327e8665e5e9844f1a8fa3f067c0db7b926171bed4e
 
 build:
   entry_points:
