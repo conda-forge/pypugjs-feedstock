@@ -1,16 +1,15 @@
 schema_version: 1
 
 context:
-  name: pypugjs
-  version: "5.13.0"
+  version: 7.0.0
 
 package:
-  name: ${{ name|lower }}
+  name: pypugjs
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pypugjs-${{ version }}.tar.gz
-  sha256: d5fc9436ed9064f1adff8877149954bb8c364453de6ea57f04d6fc35fdbbd09f
+- url: https://files.pythonhosted.org/packages/source/p/pypugjs/pypugjs-${{ version }}.tar.gz
+  sha256: 95bb872afe09a0fa367b589e43b623924e4dd8201a6d61562c0b21614a8a4e67
 
 build:
   number: 0
@@ -27,8 +26,8 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - charset-normalizer >=2.1.0,<3.0.0
-    - six >=1.15.0,<2.0.0
+    - charset-normalizer >=3.4.9
+    - six >=1.17.0
 
 tests:
   - python:
@@ -55,4 +54,3 @@ extra:
   recipe-maintainers:
     - kiwi0fruit
     - mfansler
-
